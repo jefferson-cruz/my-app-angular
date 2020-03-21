@@ -1,0 +1,198 @@
+<div class="row">
+    <div class="col">
+        <app-breadcumb></app-breadcumb>
+    </div>
+    <div class="col pb-3 text-right mt-2 mr-0 mb-0">
+        <app-fullscreen></app-fullscreen>
+    </div>
+</div>
+
+
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <app-card [ammount]="cartoesGerados.ammount" [class]="'bg-g-orange'"
+                [displayText]="cartoesGerados.title" [iconClass]="'fa fa-credit-card'">
+            </app-card>
+        </div>
+        <div class="col-md-3 mb-4">
+            <app-card [ammount]="cartoesRejeitados.ammount" [class]="'bg-g-grey'"
+                [displayText]="cartoesRejeitados.title" [iconClass]="'fa fa-exclamation-circle'"
+                [percentage]="cartoesRejeitados.percentage">
+            </app-card>
+        </div>
+        <div class="col-md-3 mb-4">
+            <app-card [class]="'bg-g-yellow'" [displayText]="'Indicadores'" [iconClass]="'fa fa-cubes'">
+            </app-card>
+        </div>
+        <div class="col-md-3 mb-4">
+            <app-card [ammount]="cartoesEmbossing.ammount" [class]="'bg-g-blue'"
+                [displayText]="cartoesEmbossing.title" [iconClass]="'fa fa-cogs'"
+                [routerLink]="['/dashboard/embossing/details']">
+            </app-card>
+        </div>
+        <div class="col-md-3 mb-4">
+            <app-card [ammount]="cartoesAtrasoEmbossing.ammount" [class]="'bg-g-blue'"
+                [displayText]="cartoesAtrasoEmbossing.title" [iconClass]="'fa fa-cogs'">
+            </app-card>
+        </div>
+        <div class="col-md-3 mb-4">
+            <app-card [ammount]="cartoesEntrega.ammount" [class]="'bg-g-darkblue'"
+                [displayText]="cartoesEntrega.title" [iconClass]="'fa fa-truck'">
+            </app-card>
+        </div>
+        <div class="col-md-3 mb-4">
+            <app-card [ammount]="cartoesAtrasoEntrega.ammount" [class]="'bg-g-darkblue'"
+                [displayText]="cartoesAtrasoEntrega.title" [iconClass]="'fa fa-truck'">
+            </app-card>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col" >
+            <app-grafico [id]="'chart'" [height]="'calc(100vh - 506px)'"></app-grafico>
+        </div>
+    </div>
+
+    <div class="row ">
+        <div class="col">
+            <app-card [ammount]="cartoesEntregue.ammount" [class]="'bg-g-green'" [displayText]="cartoesEntregue.title"
+                [iconClass]="'fa fa-smile-o'" [percentage]="cartoesEntregue.percentage">
+            </app-card>
+        </div>
+        <div class="col">
+            <app-card [ammount]="cartoesNaoEntregue.ammount" [class]="'bg-g-red'" [displayText]="cartoesNaoEntregue.title"
+                [iconClass]="'fa fa-meh-o'" [percentage]="cartoesNaoEntregue.percentage">
+            </app-card>
+        </div>
+    </div>
+
+<!-- <div class="d-flex flex-column" style="justify-content: space-between;">
+    <div>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <app-card [ammount]="cartoesGerados.ammount" [class]="'bg-g-orange'"
+                    [displayText]="cartoesGerados.title" [iconClass]="'fa fa-credit-card'">
+                </app-card>
+            </div>
+            <div class="col-md-3 mb-4">
+                <app-card [ammount]="cartoesRejeitados.ammount" [class]="'bg-g-grey'"
+                    [displayText]="cartoesRejeitados.title" [iconClass]="'fa fa-exclamation-circle'"
+                    [percentage]="cartoesRejeitados.percentage">
+                </app-card>
+            </div>
+            <div class="col-md-3 mb-4">
+                <app-card [class]="'bg-g-yellow'" [displayText]="'Indicadores'" [iconClass]="'fa fa-cubes'">
+                </app-card>
+            </div>
+            <div class="col-md-3 mb-4">
+                <app-card [ammount]="cartoesEmbossing.ammount" [class]="'bg-g-blue'"
+                    [displayText]="cartoesEmbossing.title" [iconClass]="'fa fa-cogs'"
+                    [routerLink]="['/dashboard/embossing/details']">
+                </app-card>
+            </div>
+            <div class="col-md-3 mb-4">
+                <app-card [ammount]="cartoesAtrasoEmbossing.ammount" [class]="'bg-g-blue'"
+                    [displayText]="cartoesAtrasoEmbossing.title" [iconClass]="'fa fa-cogs'">
+                </app-card>
+            </div>
+            <div class="col-md-3 mb-4">
+                <app-card [ammount]="cartoesEntrega.ammount" [class]="'bg-g-darkblue'"
+                    [displayText]="cartoesEntrega.title" [iconClass]="'fa fa-truck'">
+                </app-card>
+            </div>
+            <div class="col-md-3 mb-4">
+                <app-card [ammount]="cartoesAtrasoEntrega.ammount" [class]="'bg-g-darkblue'"
+                    [displayText]="cartoesAtrasoEntrega.title" [iconClass]="'fa fa-truck'">
+                </app-card>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="row ">
+            <div class="col mb-4">
+                <app-card [ammount]="cartoesEntregue.ammount" [class]="'bg-g-green'"
+                    [displayText]="cartoesEntregue.title" [iconClass]="'fa fa-smile-o'"
+                    [percentage]="cartoesEntregue.percentage">
+                </app-card>
+            </div>
+            <div class="col mb-4">
+                <app-card [ammount]="cartoesNaoEntregue.ammount" [class]="'bg-g-red'"
+                    [displayText]="cartoesNaoEntregue.title" [iconClass]="'fa fa-meh-o'"
+                    [percentage]="cartoesNaoEntregue.percentage">
+                </app-card>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="row ">
+            <div class="col mb-4">
+                <app-card [ammount]="cartoesEntregue.ammount" [class]="'bg-g-green'"
+                    [displayText]="cartoesEntregue.title" [iconClass]="'fa fa-smile-o'"
+                    [percentage]="cartoesEntregue.percentage">
+                </app-card>
+            </div>
+            <div class="col mb-4">
+                <app-card [ammount]="cartoesNaoEntregue.ammount" [class]="'bg-g-red'"
+                    [displayText]="cartoesNaoEntregue.title" [iconClass]="'fa fa-meh-o'"
+                    [percentage]="cartoesNaoEntregue.percentage">
+                </app-card>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+<!-- <div class="row">
+        <div class="col-md-3 mb-4">
+            <app-card 
+                [ammount]="cartoesEmbossing.ammount"
+                [class]="'bg-g-blue'" 
+                [displayText]="cartoesEmbossing.title"
+                [iconClass]="'fa fa-cogs'"
+                [routerLink]="['/dashboard/embossing/details']">
+            </app-card>
+        </div>
+        <div class="col-md-3 mb-4">
+            <app-card 
+                [ammount]="cartoesAtrasoEmbossing.ammount"
+                [class]="'bg-g-blue'" 
+                [displayText]="cartoesAtrasoEmbossing.title"
+                [iconClass]="'fa fa-cogs'">
+            </app-card>
+        </div>
+        <div class="col-md-3 mb-4">
+            <app-card 
+                [ammount]="cartoesEntrega.ammount"
+                [class]="'bg-g-darkblue'" 
+                [displayText]="cartoesEntrega.title"
+                [iconClass]="'fa fa-truck'">
+            </app-card>
+        </div>
+        <div class="col-md-3 mb-4">
+            <app-card 
+                [ammount]="cartoesAtrasoEntrega.ammount"
+                [class]="'bg-g-darkblue'" 
+                [displayText]="cartoesAtrasoEntrega.title"
+                [iconClass]="'fa fa-truck'">
+            </app-card>
+        </div>
+    </div> -->
+<!-- <div class="row">
+        <div class="col" >
+            <app-grafico [id]="'chart'" [height]="'calc(100vh - 506px)'"></app-grafico>
+        </div>
+    </div> -->
+<!-- <div class="row ">
+    <div class="col">
+        <app-card [ammount]="cartoesEntregue.ammount" [class]="'bg-g-green'" [displayText]="cartoesEntregue.title"
+            [iconClass]="'fa fa-smile-o'" [percentage]="cartoesEntregue.percentage">
+        </app-card>
+    </div>
+    <div class="col">
+        <app-card [ammount]="cartoesNaoEntregue.ammount" [class]="'bg-g-red'" [displayText]="cartoesNaoEntregue.title"
+            [iconClass]="'fa fa-meh-o'" [percentage]="cartoesNaoEntregue.percentage">
+        </app-card>
+    </div>
+</div> -->

@@ -1,0 +1,35 @@
+<div class="card shadow-sm" [ngStyle]="{'background-color': backgroundColor, 'color': fontColor}"
+  [ngClass]="class" [@fadeIn]>
+
+  <div *ngIf="routerLink else out">
+    <a [routerLink]="routerLink" style="text-decoration: none; color: #fff;">
+      <div class="card-body position-relative" *ngIf="routerLink else out">
+
+        <div class="d-flex justify-content-between">
+          <h3 class="card-number mt-0" [innerHTML]="ammount"></h3>
+          <i [ngClass]="iconClass" class="card-icon"></i>
+        </div>
+
+        <div class="d-flex justify-content-between">
+          <h5 class="mb-0 text-uppercase card-text">{{displayText}}</h5>
+          <h5 class="card-number mt-0 card-percentage" *ngIf="percentage">{{percentage}}%</h5>
+        </div>
+      </div>
+    </a>
+  </div>
+
+
+  <ng-template #out>
+    <div class="card-body position-relative">
+      <div class="d-flex justify-content-between">
+        <h3 class="card-number mt-0" [innerHTML]="ammount"></h3>
+        <i [ngClass]="iconClass" class="card-icon"></i>
+      </div>
+
+      <div class="d-flex justify-content-between">
+        <h5 class="mb-0 text-uppercase card-text">{{displayText}}</h5>
+        <h5 class="card-number mt-0 card-percentage" *ngIf="percentage">{{percentage}}%</h5>
+      </div>
+    </div>
+  </ng-template>
+</div>

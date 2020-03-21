@@ -1,0 +1,4 @@
+<a [title]="!active ? 'Visualizar em tela cheia' : 'Remover tela cheia'" (click)="toggleFullScreen()" style="cursor: pointer;" height="16" width="16">
+    <img src="../../assets/fullscreen.png" *ngIf="!active">
+    <img src="../../assets/unfullscreen.png" *ngIf="active">
+</a>

@@ -1,0 +1,6 @@
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" (click)="enable($event)">
+        <i [class]="iconClass" *ngIf="iconClass"></i> {{displayText}}
+    </a>
+    <ng-content></ng-content>
+</li>

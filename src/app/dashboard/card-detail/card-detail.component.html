@@ -1,0 +1,18 @@
+<div class="row" *ngFor="let item of cards">
+    <div class="col mb-4">
+        <app-card 
+            [ammount]="item[0].ammount"
+            [class]="'bg-g-blue'" 
+            [displayText]="item[0].title"
+            [iconClass]="'fa fa-cogs'">
+        </app-card>
+    </div>
+    <div class="col mb-4">
+        <app-card 
+            [ammount]="item[1].ammount"
+            [class]="'bg-g-blue'" 
+            [displayText]="item[1].title"
+            [iconClass]="'fa fa-cogs'">
+        </app-card>
+    </div>
+</div>

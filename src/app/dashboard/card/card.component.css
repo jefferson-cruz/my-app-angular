@@ -1,0 +1,59 @@
+.card {
+    border: none;
+    color:#fff;
+}
+
+.card-icon  {
+    font-size: 3rem;
+}
+
+.card-number, .card-text, .card-percentage {
+    font-weight: 500;
+}
+
+.card-text {
+    font-size: 1rem;
+}
+
+.bg-g-orange {
+    background: linear-gradient(to right,#fb8c00,#ef6c00);
+}
+.bg-g-orange:hover {
+    background: linear-gradient(to right,#fb8c00,#f57c00);
+}
+.bg-g-grey {
+    background: linear-gradient(to right,#9e9e9e,#757575);
+}
+.bg-g-grey:hover {
+    background: linear-gradient(to right,#9e9e9e,#878787);
+}
+.bg-g-yellow {
+    background: linear-gradient(to right,#fdd835,#ff8f00);
+}
+.bg-g-yellow:hover {
+    background: linear-gradient(to right,#ffca28,#fbc02d);
+}
+.bg-g-blue {
+    background: linear-gradient(to right,#549AD8,#005cb2);
+}
+.bg-g-blue:hover {
+    background: linear-gradient(to right,#549AD8,#0077c2);
+}
+.bg-g-darkblue {
+    background: linear-gradient(to right,#3f51b5,#283593);
+}
+.bg-g-darkblue:hover {
+    background: linear-gradient(to right,#3f51b5,#3949ab);
+}
+.bg-g-green {
+    background: linear-gradient(to right,#388e3c,#00600f);
+}
+.bg-g-green:hover {
+    background: linear-gradient(to right,#43a047,#00701a);
+}
+.bg-g-red {
+    background: linear-gradient(to right,#c62828,#8e0000);
+}
+.bg-g-red:hover {
+    background: linear-gradient(to right,#e53935,#ab000d);
+}

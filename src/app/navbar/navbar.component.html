@@ -1,0 +1,63 @@
+<nav class="navbar navbar-expand navbar-light shadow-sm">
+    <a class="navbar-brand" [routerLink]="'/dashboard'"><img src="./assets/tracking.png" alt="Voltar para Dashboard" height="32"></a>
+    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+            <app-navbar-item [routerLink]="'/dashboard'"><i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard</app-navbar-item>
+
+            <app-navbar-item-dropdown [displayText]="'Usuários'" [iconClass]="'fa fa-user'">
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Criar...</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Gerenciar</a>
+                </div>
+            </app-navbar-item-dropdown>
+
+            <app-navbar-item-dropdown [displayText]="'Etapas'" [iconClass]="'fa fa-cogs'">
+                <ul class="dropdown-menu">
+                    <li class="dropdown-submenu"><a class="dropdown-item " href="#">Processadoras <i class="dropdown-toggle pull-right"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Criar...</a></li>
+                            <li class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Gerenciar</a></li>                           
+                        </ul>
+                    </li>
+                    <li class="dropdown-submenu"><a class="dropdown-item " href="#">Embossadoras <i class="dropdown-toggle pull-right"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Criar...</a></li>
+                            <li class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Gerenciar</a></li>                           
+                        </ul>
+                    </li>
+                    <li class="dropdown-submenu"><a class="dropdown-item " href="#">Couriers <i class="dropdown-toggle pull-right"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Criar...</a></li>
+                            <li class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Gerenciar</a></li>                           
+                        </ul>
+                    </li>
+                </ul>
+            </app-navbar-item-dropdown>
+
+            <app-navbar-item-dropdown [displayText]="'Layouts'" [iconClass]="'fa fa-table'">
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Criar...</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Gerenciar</a>
+                </div>
+            </app-navbar-item-dropdown>
+
+            <app-navbar-item-dropdown [displayText]="'Importações'" [iconClass]="'fa fa-file'">
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Realizar Nova...</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Gerenciar</a>
+                </div>
+            </app-navbar-item-dropdown>
+        </ul>
+    </div>
+</nav>
